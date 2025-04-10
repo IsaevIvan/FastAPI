@@ -7,3 +7,6 @@ app = FastAPI()
 async def root():
     return FileResponse("index.html")
 
+@app.get("/custom")
+async def read_custom_message():
+    return {"message":"This is a custom message"}
